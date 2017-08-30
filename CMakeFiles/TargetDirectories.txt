@@ -1,0 +1,8 @@
+/Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeFiles/docs.dir
+/Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeFiles/install.dir
+/Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeFiles/uninstall.dir
+/Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeFiles/ALL_BUILD.dir
+/Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeFiles/ZERO_CHECK.dir
+/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/CMakeFiles/install.dir
+/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/CMakeFiles/chromaprint.dir
+/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/CMakeFiles/chromaprint_objs.dir

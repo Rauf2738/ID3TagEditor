@@ -1,0 +1,5 @@
+/usr/local/lib/pkgconfig/libchromaprint.pc
+/usr/local/lib/libchromaprint.1.4.2.dylib
+/usr/local/lib/libchromaprint.1.dylib
+/usr/local/lib/libchromaprint.dylib
+/usr/local/include/chromaprint.h

@@ -1,0 +1,2376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0384EA14BC6145CEA88FE4C4 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A23E2C8C2DC24F0092AA8EC0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				2C44E944A50345AEA5039D22 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		28812DD069E244A5B2CE6C21 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 46A0F50D5E08441592D3EBB2 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				A9395F0F548B4408B886E499 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				A672F448DEA44B1BA6D6A71E /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		3CEF360EEF184F6F873F5AE3 /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 435FF44325F74714B9CCB5BC /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				0CD6FCB8832648DEBB2170AF /* CMake Rules */,
+			);
+			dependencies = (
+				C282B6B28E7641F7ACD19FF2 /* PBXTargetDependency */,
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		6101C1624C374DA1852449BC /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 088472C288CA41EBA9755926 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				C6A6969BD4894B2D8C73192C /* CMake Rules */,
+			);
+			dependencies = (
+				0BE08DBC0FA844C6965BB3F3 /* PBXTargetDependency */,
+				A51161089B974A3AA5B85D30 /* PBXTargetDependency */,
+				0641AAE6CF0A4F8D99D1D055 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		BDCCEB6037064888AB671654 /* docs */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0EFAEAE70A984B79A6E02B11 /* Build configuration list for PBXAggregateTarget "docs" */;
+			buildPhases = (
+				8D90B91A1D5846BEAFC3632B /* CMake Rules */,
+			);
+			dependencies = (
+				6E76263A4FD44EC6AFDAD34D /* PBXTargetDependency */,
+			);
+			name = docs;
+			productName = docs;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		042D0662EA1D4620BB934DB3 /* chroma_resampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95AD9E11B47C45BC92AC73F9 /* chroma_resampler.cpp */; };
+		099DA2A1C01649B0B486F6BF /* chromaprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7552EE11841D45B9BD471113 /* chromaprint.cpp */; };
+		0DC2C37E052A4B6E8DA23DF5 /* audio_processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEEE888C46EB40CDB7D15D05 /* audio_processor.cpp */; };
+		20AB34C19B9044728682D2D5 /* simhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26CCDE9F1DB443E1844E1F09 /* simhash.cpp */; };
+		272C3BE05DC54E55982A1BED /* chroma.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2031D37A23D04E6790D7E0DE /* chroma.cpp */; };
+		2F7C762A1DB147199FA315D5 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37073B7BD5764FF5BAAB7BF9 /* base64.cpp */; };
+		376C3A341F55AC7500B9BB2D /* chromaprint.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9B418F2A1144E2A6C088BF /* chromaprint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37E807ED1F1F5EEB00937EDC /* Chroma.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E807DF1F1F5EEB00937EDC /* Chroma.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37E807F81F1F5EFB00937EDC /* chromaprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7552EE11841D45B9BD471113 /* chromaprint.cpp */; };
+		37E807FB1F1F5F2300937EDC /* libchromaprint_objs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3390F7CD80044AE59D3E77F9 /* libchromaprint_objs.a */; };
+		37E808061F1F615000937EDC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E808051F1F615000937EDC /* Accelerate.framework */; };
+		40317ED8C37A42B68955F7DB /* spectrum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8951CB6EBB648F790034610 /* spectrum.cpp */; };
+		525B129ABF3847F6AB1E14C8 /* fingerprint_calculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B14EEE311700432A90321814 /* fingerprint_calculator.cpp */; };
+		55A02438040544B689A1ECDD /* silence_remover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C42EEB1DE984AEAA251F924 /* silence_remover.cpp */; };
+		71D614D0A31C436A96B4AF23 /* fingerprint_matcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6C8FEC81C094F62BB84BE1B /* fingerprint_matcher.cpp */; };
+		8087D202EB074810B783D998 /* fingerprint_decompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B27BCCD3222E4CD0A537CEDF /* fingerprint_decompressor.cpp */; };
+		94697790926544F88BC6598F /* image_builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6CAA57ECCCF4C32B541B7D4 /* image_builder.cpp */; };
+		9F671EE9D701412AB29F8CC3 /* chroma_filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62810A2063FB427C9759BB3C /* chroma_filter.cpp */; };
+		B186E8301C4C49A4941BF13F /* fingerprinter_configuration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C720F92130149548E8A3699 /* fingerprinter_configuration.cpp */; };
+		D06061080CA04237B011DF23 /* fingerprinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7349BB86C72C4C4C8D3E91F9 /* fingerprinter.cpp */; };
+		DEB1A7F874B7474583D9D4F1 /* fft_lib_vdsp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9054017744BAFAAD08871 /* fft_lib_vdsp.cpp */; };
+		E02D57692D9B4107B35DFDBA /* resample2.c in Sources */ = {isa = PBXBuildFile; fileRef = E3D625FAC1254C67A9A91E8A /* resample2.c */; };
+		E468AEA06C1F4A72A824A1B2 /* fft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54417AB5E6984C75BAE66419 /* fft.cpp */; };
+		FCB5588920664F5892B72FF0 /* fingerprint_compressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 446D31DB91844E1A87C393E5 /* fingerprint_compressor.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		131E549A70924FCEAD79EFCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0384EA14BC6145CEA88FE4C4;
+			remoteInfo = ZERO_CHECK;
+		};
+		17B5308EE8EA455E9E36344D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2A5F354E3E54C7BBA959E21;
+			remoteInfo = chromaprint;
+		};
+		28F783282DD64E608FC04471 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0384EA14BC6145CEA88FE4C4;
+			remoteInfo = ZERO_CHECK;
+		};
+		2A6C8492F49B4C91968396DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A65C3EA6DC684537B77AD967;
+			remoteInfo = chromaprint_objs;
+		};
+		37E807F91F1F5F1A00937EDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A65C3EA6DC684537B77AD967;
+			remoteInfo = chromaprint_objs;
+		};
+		4DF77DAB1E6048D3ACC6BC07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6101C1624C374DA1852449BC;
+			remoteInfo = ALL_BUILD;
+		};
+		9758488EDED94DA9A038F9A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A65C3EA6DC684537B77AD967;
+			remoteInfo = chromaprint_objs;
+		};
+		9EA7FEAA0C1042D78BCAC49E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0384EA14BC6145CEA88FE4C4;
+			remoteInfo = ZERO_CHECK;
+		};
+		A0C95CE3625F4CF6849A2862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0384EA14BC6145CEA88FE4C4;
+			remoteInfo = ZERO_CHECK;
+		};
+		EF18F1FA15414EF09A7711B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8632B2D11843AFA1DD47DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0384EA14BC6145CEA88FE4C4;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		032E59A41FCD4A2C9EEEA13A /* fingerprint_compressor.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = fingerprint_compressor.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_compressor.o"; sourceTree = SOURCE_ROOT; };
+		0C720F92130149548E8A3699 /* fingerprinter_configuration.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fingerprinter_configuration.cpp; path = src/fingerprinter_configuration.cpp; sourceTree = SOURCE_ROOT; };
+		108E1F8A042E41739A177ECB /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		181F0A1E46B04FABB50EB8C5 /* audio_processor.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = audio_processor.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/audio_processor.o"; sourceTree = SOURCE_ROOT; };
+		1EBAE72B21524A1EBA978C13 /* fingerprint_decompressor.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = fingerprint_decompressor.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_decompressor.o"; sourceTree = SOURCE_ROOT; };
+		2031D37A23D04E6790D7E0DE /* chroma.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = chroma.cpp; path = src/chroma.cpp; sourceTree = SOURCE_ROOT; };
+		24A8FDA4D3D44C6BA2801845 /* chroma.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = chroma.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma.o"; sourceTree = SOURCE_ROOT; };
+		26CCDE9F1DB443E1844E1F09 /* simhash.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = simhash.cpp; path = src/simhash.cpp; sourceTree = SOURCE_ROOT; };
+		32048EF634D745B9BD429FE9 /* chroma_resampler.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = chroma_resampler.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_resampler.o"; sourceTree = SOURCE_ROOT; };
+		3390F7CD80044AE59D3E77F9 /* libchromaprint_objs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libchromaprint_objs.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37073B7BD5764FF5BAAB7BF9 /* base64.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base64.cpp; path = src/utils/base64.cpp; sourceTree = SOURCE_ROOT; };
+		37E807DD1F1F5EEB00937EDC /* Chroma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Chroma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37E807DF1F1F5EEB00937EDC /* Chroma.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chroma.h; sourceTree = "<group>"; };
+		37E807E01F1F5EEB00937EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37E807EA1F1F5EEB00937EDC /* ChromaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChromaTests.m; sourceTree = "<group>"; };
+		37E807EC1F1F5EEB00937EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37E808051F1F615000937EDC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3B6F6C7C8E074457A791633D /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3F313255464A4A93B4091E7F /* libchromaprint.1.4.2.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libchromaprint.1.4.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		446D31DB91844E1A87C393E5 /* fingerprint_compressor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fingerprint_compressor.cpp; path = src/fingerprint_compressor.cpp; sourceTree = SOURCE_ROOT; };
+		504669C9659C46E48A618846 /* fingerprint_matcher.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fingerprint_matcher.h; path = src/fingerprint_matcher.h; sourceTree = SOURCE_ROOT; };
+		513CA6B0E9CF4DC1ADF1DDC7 /* fingerprinter_configuration.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = fingerprinter_configuration.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter_configuration.o"; sourceTree = SOURCE_ROOT; };
+		516BF22D51C64ACBBCD15BCA /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		51DE57369D8A464D80675EE3 /* fft_lib_vdsp.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = fft_lib_vdsp.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft_lib_vdsp.o"; sourceTree = SOURCE_ROOT; };
+		54417AB5E6984C75BAE66419 /* fft.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fft.cpp; path = src/fft.cpp; sourceTree = SOURCE_ROOT; };
+		5C7E88536C5140EAB02D7377 /* image_builder.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = image_builder.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/image_builder.o"; sourceTree = SOURCE_ROOT; };
+		62810A2063FB427C9759BB3C /* chroma_filter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = chroma_filter.cpp; path = src/chroma_filter.cpp; sourceTree = SOURCE_ROOT; };
+		6E92421ACCB848149473E810 /* simhash.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = simhash.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/simhash.o"; sourceTree = SOURCE_ROOT; };
+		7349BB86C72C4C4C8D3E91F9 /* fingerprinter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fingerprinter.cpp; path = src/fingerprinter.cpp; sourceTree = SOURCE_ROOT; };
+		7421843C7790447CACF5D70B /* Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; lastKnownFileType = text.plist; name = Info.plist; path = build.iOS/src/CMakeFiles/chromaprint.dir/Info.plist; sourceTree = SOURCE_ROOT; };
+		7552EE11841D45B9BD471113 /* chromaprint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = chromaprint.cpp; path = src/chromaprint.cpp; sourceTree = SOURCE_ROOT; };
+		797CFFCC1D794B24B53C5BA3 /* fingerprinter.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = fingerprinter.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter.o"; sourceTree = SOURCE_ROOT; };
+		7C42EEB1DE984AEAA251F924 /* silence_remover.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = silence_remover.cpp; path = src/silence_remover.cpp; sourceTree = SOURCE_ROOT; };
+		8083515C5DF346C0BFFDB240 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		84DC4AB3284847F8A44B6901 /* fft.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = fft.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft.o"; sourceTree = SOURCE_ROOT; };
+		91E97FA7D3FC49E4B086B344 /* rolling_integral_image.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = rolling_integral_image.h; path = src/utils/rolling_integral_image.h; sourceTree = SOURCE_ROOT; };
+		95AD9E11B47C45BC92AC73F9 /* chroma_resampler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = chroma_resampler.cpp; path = src/chroma_resampler.cpp; sourceTree = SOURCE_ROOT; };
+		9CA9054017744BAFAAD08871 /* fft_lib_vdsp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fft_lib_vdsp.cpp; path = src/fft_lib_vdsp.cpp; sourceTree = SOURCE_ROOT; };
+		B110DD45C0DF42FF82CC34C0 /* gradient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = gradient.h; path = src/utils/gradient.h; sourceTree = SOURCE_ROOT; };
+		B14EEE311700432A90321814 /* fingerprint_calculator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fingerprint_calculator.cpp; path = src/fingerprint_calculator.cpp; sourceTree = SOURCE_ROOT; };
+		B1CB7E3C17C941ACAE0D053F /* base64.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base64.h; path = src/utils/base64.h; sourceTree = SOURCE_ROOT; };
+		B27BCCD3222E4CD0A537CEDF /* fingerprint_decompressor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fingerprint_decompressor.cpp; path = src/fingerprint_decompressor.cpp; sourceTree = SOURCE_ROOT; };
+		B48CFB11C5DC407D983AE082 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B526F32E78F94B3BB906F45B /* resample2.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = resample2.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/resample2.o"; sourceTree = SOURCE_ROOT; };
+		B59ABF0671DA472B8E1B223E /* spectrum.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = spectrum.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/spectrum.o"; sourceTree = SOURCE_ROOT; };
+		B6C8FEC81C094F62BB84BE1B /* fingerprint_matcher.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fingerprint_matcher.cpp; path = src/fingerprint_matcher.cpp; sourceTree = SOURCE_ROOT; };
+		B6CAA57ECCCF4C32B541B7D4 /* image_builder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = image_builder.cpp; path = src/image_builder.cpp; sourceTree = SOURCE_ROOT; };
+		B9A549C95099413B9744717B /* chroma_filter.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = chroma_filter.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_filter.o"; sourceTree = SOURCE_ROOT; };
+		BB8532F10BFE4AE0B0BFC0E8 /* simhash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = simhash.h; path = src/simhash.h; sourceTree = SOURCE_ROOT; };
+		BDB037DD0D114A12828CDCA9 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; lastKnownFileType = text.plist; name = Info.plist; path = build.iOS/src/CMakeFiles/chromaprint_objs.dir/Info.plist; sourceTree = SOURCE_ROOT; };
+		BE25C39F58CB48918FE3D345 /* base64.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = base64.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/base64.o"; sourceTree = SOURCE_ROOT; };
+		CEEE888C46EB40CDB7D15D05 /* audio_processor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = audio_processor.cpp; path = src/audio_processor.cpp; sourceTree = SOURCE_ROOT; };
+		D1581BE9B5C34228AD88E2C8 /* fingerprint_calculator.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = fingerprint_calculator.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_calculator.o"; sourceTree = SOURCE_ROOT; };
+		D91C644B708846F3BC04F3BF /* fingerprint_matcher.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = fingerprint_matcher.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_matcher.o"; sourceTree = SOURCE_ROOT; };
+		DDA9179F5FE743BCA2616C14 /* audio_slicer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = audio_slicer.h; path = src/audio/audio_slicer.h; sourceTree = SOURCE_ROOT; };
+		DFB3137608454C55A4C707DE /* gaussian_filter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = gaussian_filter.h; path = src/utils/gaussian_filter.h; sourceTree = SOURCE_ROOT; };
+		E38F4968174A4A37A57219A8 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E3D625FAC1254C67A9A91E8A /* resample2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = resample2.c; path = src/avresample/resample2.c; sourceTree = SOURCE_ROOT; };
+		E8951CB6EBB648F790034610 /* spectrum.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = spectrum.cpp; path = src/spectrum.cpp; sourceTree = SOURCE_ROOT; };
+		F59563E540BC47549EF61897 /* silence_remover.o */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; fileEncoding = 4; name = silence_remover.o; path = "build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/silence_remover.o"; sourceTree = SOURCE_ROOT; };
+		F67346B70766439DB50D4E1F /* scope_exit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scope_exit.h; path = src/utils/scope_exit.h; sourceTree = SOURCE_ROOT; };
+		FB9B418F2A1144E2A6C088BF /* chromaprint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = chromaprint.h; path = src/chromaprint.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37E807D91F1F5EEB00937EDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37E808061F1F615000937EDC /* Accelerate.framework in Frameworks */,
+				37E807FB1F1F5F2300937EDC /* libchromaprint_objs.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DAFF509FA3142BF9D8C402A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20D94A78BA9B4C6DB9FC1C36 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				E0D887FDD3854FF1BBA8F174 /* CMake Rules */,
+				E38F4968174A4A37A57219A8 /* CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		279D9A76219145268ADF7CBB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7421843C7790447CACF5D70B /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		37E807DE1F1F5EEB00937EDC /* Chroma */ = {
+			isa = PBXGroup;
+			children = (
+				37E807DF1F1F5EEB00937EDC /* Chroma.h */,
+				37E807E01F1F5EEB00937EDC /* Info.plist */,
+			);
+			name = Chroma;
+			path = build.iOS/Chroma;
+			sourceTree = "<group>";
+		};
+		37E807E91F1F5EEB00937EDC /* ChromaTests */ = {
+			isa = PBXGroup;
+			children = (
+				37E807EA1F1F5EEB00937EDC /* ChromaTests.m */,
+				37E807EC1F1F5EEB00937EDC /* Info.plist */,
+			);
+			name = ChromaTests;
+			path = build.iOS/ChromaTests;
+			sourceTree = "<group>";
+		};
+		37E808041F1F615000937EDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37E808051F1F615000937EDC /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39ADE24C52C04DB9A0510502 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7552EE11841D45B9BD471113 /* chromaprint.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		48CA03816C5B4FC4B17FAB4C /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB9B418F2A1144E2A6C088BF /* chromaprint.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		5631D4628D624ED7972701DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F313255464A4A93B4091E7F /* libchromaprint.1.4.2.dylib */,
+				3390F7CD80044AE59D3E77F9 /* libchromaprint_objs.a */,
+				37E807DD1F1F5EEB00937EDC /* Chroma.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65527AB0F85C4F8DA913EC61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDB037DD0D114A12828CDCA9 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6AA7A10753C645E489A0B1EB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E66664DF748A46C89938C372 /* docs */,
+				89C202E5D5DE43469106BA98 /* uninstall */,
+				CAE310B2A8B941038262758C /* ALL_BUILD */,
+				20D94A78BA9B4C6DB9FC1C36 /* ZERO_CHECK */,
+				850AEE87B3C64154B43DCDA5 /* chromaprint */,
+				D52298FD5A8A4FEDBC95DCD5 /* chromaprint_objs */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		850AEE87B3C64154B43DCDA5 /* chromaprint */ = {
+			isa = PBXGroup;
+			children = (
+				39ADE24C52C04DB9A0510502 /* Source Files */,
+				48CA03816C5B4FC4B17FAB4C /* Header Files */,
+				9B044017E6374C65A9D17502 /* Object Files */,
+				279D9A76219145268ADF7CBB /* Resources */,
+				B48CFB11C5DC407D983AE082 /* CMakeLists.txt */,
+			);
+			name = chromaprint;
+			sourceTree = "<group>";
+		};
+		88173B7ADE5D4358BF4FEE17 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDA9179F5FE743BCA2616C14 /* audio_slicer.h */,
+				504669C9659C46E48A618846 /* fingerprint_matcher.h */,
+				BB8532F10BFE4AE0B0BFC0E8 /* simhash.h */,
+				B1CB7E3C17C941ACAE0D053F /* base64.h */,
+				DFB3137608454C55A4C707DE /* gaussian_filter.h */,
+				B110DD45C0DF42FF82CC34C0 /* gradient.h */,
+				91E97FA7D3FC49E4B086B344 /* rolling_integral_image.h */,
+				F67346B70766439DB50D4E1F /* scope_exit.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		89C202E5D5DE43469106BA98 /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				975A372DC66740358A045AAF /* CMake Rules */,
+				108E1F8A042E41739A177ECB /* CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		8D95E2D2365F4A41AB57BD5C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE888C46EB40CDB7D15D05 /* audio_processor.cpp */,
+				E3D625FAC1254C67A9A91E8A /* resample2.c */,
+				2031D37A23D04E6790D7E0DE /* chroma.cpp */,
+				62810A2063FB427C9759BB3C /* chroma_filter.cpp */,
+				95AD9E11B47C45BC92AC73F9 /* chroma_resampler.cpp */,
+				54417AB5E6984C75BAE66419 /* fft.cpp */,
+				9CA9054017744BAFAAD08871 /* fft_lib_vdsp.cpp */,
+				B14EEE311700432A90321814 /* fingerprint_calculator.cpp */,
+				446D31DB91844E1A87C393E5 /* fingerprint_compressor.cpp */,
+				B27BCCD3222E4CD0A537CEDF /* fingerprint_decompressor.cpp */,
+				B6C8FEC81C094F62BB84BE1B /* fingerprint_matcher.cpp */,
+				7349BB86C72C4C4C8D3E91F9 /* fingerprinter.cpp */,
+				0C720F92130149548E8A3699 /* fingerprinter_configuration.cpp */,
+				B6CAA57ECCCF4C32B541B7D4 /* image_builder.cpp */,
+				7C42EEB1DE984AEAA251F924 /* silence_remover.cpp */,
+				26CCDE9F1DB443E1844E1F09 /* simhash.cpp */,
+				E8951CB6EBB648F790034610 /* spectrum.cpp */,
+				37073B7BD5764FF5BAAB7BF9 /* base64.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		967890561B31452AB7D0726B /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		975A372DC66740358A045AAF /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		9B044017E6374C65A9D17502 /* Object Files */ = {
+			isa = PBXGroup;
+			children = (
+				181F0A1E46B04FABB50EB8C5 /* audio_processor.o */,
+				BE25C39F58CB48918FE3D345 /* base64.o */,
+				24A8FDA4D3D44C6BA2801845 /* chroma.o */,
+				B9A549C95099413B9744717B /* chroma_filter.o */,
+				32048EF634D745B9BD429FE9 /* chroma_resampler.o */,
+				84DC4AB3284847F8A44B6901 /* fft.o */,
+				51DE57369D8A464D80675EE3 /* fft_lib_vdsp.o */,
+				D1581BE9B5C34228AD88E2C8 /* fingerprint_calculator.o */,
+				032E59A41FCD4A2C9EEEA13A /* fingerprint_compressor.o */,
+				1EBAE72B21524A1EBA978C13 /* fingerprint_decompressor.o */,
+				D91C644B708846F3BC04F3BF /* fingerprint_matcher.o */,
+				797CFFCC1D794B24B53C5BA3 /* fingerprinter.o */,
+				513CA6B0E9CF4DC1ADF1DDC7 /* fingerprinter_configuration.o */,
+				5C7E88536C5140EAB02D7377 /* image_builder.o */,
+				B526F32E78F94B3BB906F45B /* resample2.o */,
+				F59563E540BC47549EF61897 /* silence_remover.o */,
+				6E92421ACCB848149473E810 /* simhash.o */,
+				B59ABF0671DA472B8E1B223E /* spectrum.o */,
+			);
+			name = "Object Files";
+			sourceTree = "<group>";
+		};
+		B9B19867E53948B08C6F3C8D = {
+			isa = PBXGroup;
+			children = (
+				6AA7A10753C645E489A0B1EB /* Sources */,
+				0DAFF509FA3142BF9D8C402A /* Resources */,
+				37E807DE1F1F5EEB00937EDC /* Chroma */,
+				37E807E91F1F5EEB00937EDC /* ChromaTests */,
+				5631D4628D624ED7972701DA /* Products */,
+				37E808041F1F615000937EDC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CAE310B2A8B941038262758C /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				E141B755D5FF4DFC87054477 /* CMake Rules */,
+				516BF22D51C64ACBBCD15BCA /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		D52298FD5A8A4FEDBC95DCD5 /* chromaprint_objs */ = {
+			isa = PBXGroup;
+			children = (
+				8D95E2D2365F4A41AB57BD5C /* Source Files */,
+				88173B7ADE5D4358BF4FEE17 /* Header Files */,
+				65527AB0F85C4F8DA913EC61 /* Resources */,
+				3B6F6C7C8E074457A791633D /* CMakeLists.txt */,
+			);
+			name = chromaprint_objs;
+			sourceTree = "<group>";
+		};
+		E0D887FDD3854FF1BBA8F174 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		E141B755D5FF4DFC87054477 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		E66664DF748A46C89938C372 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				967890561B31452AB7D0726B /* CMake Rules */,
+				8083515C5DF346C0BFFDB240 /* CMakeLists.txt */,
+			);
+			name = docs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		37E807DA1F1F5EEB00937EDC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376C3A341F55AC7500B9BB2D /* chromaprint.h in Headers */,
+				37E807ED1F1F5EEB00937EDC /* Chroma.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		37E807DC1F1F5EEB00937EDC /* Chroma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37E807F61F1F5EEB00937EDC /* Build configuration list for PBXNativeTarget "Chroma" */;
+			buildPhases = (
+				37E807D81F1F5EEB00937EDC /* Sources */,
+				37E807D91F1F5EEB00937EDC /* Frameworks */,
+				37E807DA1F1F5EEB00937EDC /* Headers */,
+				37E807DB1F1F5EEB00937EDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37E807FA1F1F5F1A00937EDC /* PBXTargetDependency */,
+			);
+			name = Chroma;
+			productName = Chroma;
+			productReference = 37E807DD1F1F5EEB00937EDC /* Chroma.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A65C3EA6DC684537B77AD967 /* chromaprint_objs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25F5A2831C524DA4AEF364F2 /* Build configuration list for PBXNativeTarget "chromaprint_objs" */;
+			buildPhases = (
+				762C948C8C35468885C21481 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDD185AA722F40759F0BEF25 /* PBXTargetDependency */,
+			);
+			name = chromaprint_objs;
+			productName = chromaprint_objs;
+			productReference = 3390F7CD80044AE59D3E77F9 /* libchromaprint_objs.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C2A5F354E3E54C7BBA959E21 /* chromaprint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 018E18794C804F83A6557280 /* Build configuration list for PBXNativeTarget "chromaprint" */;
+			buildPhases = (
+				BD691FBCD27B47FBA1AE6615 /* Sources */,
+				3D943B4132104CD9985FCF1E /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1544986A5A04F9395807DE0 /* PBXTargetDependency */,
+				943F95BA114A448DB12835D7 /* PBXTargetDependency */,
+			);
+			name = chromaprint;
+			productName = chromaprint;
+			productReference = 3F313255464A4A93B4091E7F /* libchromaprint.1.4.2.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C8632B2D11843AFA1DD47DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					37E807DC1F1F5EEB00937EDC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3Z52UR7LAJ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 232AD63C807F4067A9AFF557 /* Build configuration list for PBXProject "chromaprint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B9B19867E53948B08C6F3C8D;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				6101C1624C374DA1852449BC /* ALL_BUILD */,
+				0384EA14BC6145CEA88FE4C4 /* ZERO_CHECK */,
+				BDCCEB6037064888AB671654 /* docs */,
+				28812DD069E244A5B2CE6C21 /* install */,
+				3CEF360EEF184F6F873F5AE3 /* uninstall */,
+				C2A5F354E3E54C7BBA959E21 /* chromaprint */,
+				A65C3EA6DC684537B77AD967 /* chromaprint_objs */,
+				37E807DC1F1F5EEB00937EDC /* Chroma */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37E807DB1F1F5EEB00937EDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CD6FCB8832648DEBB2170AF /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/readdle/Desktop/chromaprint-master2/build.iOS -f /Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		2C44E944A50345AEA5039D22 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/readdle/Desktop/chromaprint-master2/build.iOS -f /Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		3D943B4132104CD9985FCF1E /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/readdle/Desktop/chromaprint-master2/build.iOS/src -f /Users/readdle/Desktop/chromaprint-master2/build.iOS/src/CMakeScripts/chromaprint_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		8D90B91A1D5846BEAFC3632B /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/readdle/Desktop/chromaprint-master2/build.iOS -f /Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeScripts/docs_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		A9395F0F548B4408B886E499 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/readdle/Desktop/chromaprint-master2/build.iOS -f /Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		C6A6969BD4894B2D8C73192C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/readdle/Desktop/chromaprint-master2/build.iOS -f /Users/readdle/Desktop/chromaprint-master2/build.iOS/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37E807D81F1F5EEB00937EDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37E807F81F1F5EFB00937EDC /* chromaprint.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		762C948C8C35468885C21481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DC2C37E052A4B6E8DA23DF5 /* audio_processor.cpp in Sources */,
+				E02D57692D9B4107B35DFDBA /* resample2.c in Sources */,
+				272C3BE05DC54E55982A1BED /* chroma.cpp in Sources */,
+				9F671EE9D701412AB29F8CC3 /* chroma_filter.cpp in Sources */,
+				042D0662EA1D4620BB934DB3 /* chroma_resampler.cpp in Sources */,
+				E468AEA06C1F4A72A824A1B2 /* fft.cpp in Sources */,
+				DEB1A7F874B7474583D9D4F1 /* fft_lib_vdsp.cpp in Sources */,
+				525B129ABF3847F6AB1E14C8 /* fingerprint_calculator.cpp in Sources */,
+				FCB5588920664F5892B72FF0 /* fingerprint_compressor.cpp in Sources */,
+				8087D202EB074810B783D998 /* fingerprint_decompressor.cpp in Sources */,
+				71D614D0A31C436A96B4AF23 /* fingerprint_matcher.cpp in Sources */,
+				D06061080CA04237B011DF23 /* fingerprinter.cpp in Sources */,
+				B186E8301C4C49A4941BF13F /* fingerprinter_configuration.cpp in Sources */,
+				94697790926544F88BC6598F /* image_builder.cpp in Sources */,
+				55A02438040544B689A1ECDD /* silence_remover.cpp in Sources */,
+				20AB34C19B9044728682D2D5 /* simhash.cpp in Sources */,
+				40317ED8C37A42B68955F7DB /* spectrum.cpp in Sources */,
+				2F7C762A1DB147199FA315D5 /* base64.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD691FBCD27B47FBA1AE6615 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099DA2A1C01649B0B486F6BF /* chromaprint.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0641AAE6CF0A4F8D99D1D055 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0384EA14BC6145CEA88FE4C4 /* ZERO_CHECK */;
+			targetProxy = A0C95CE3625F4CF6849A2862 /* PBXContainerItemProxy */;
+		};
+		0BE08DBC0FA844C6965BB3F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2A5F354E3E54C7BBA959E21 /* chromaprint */;
+			targetProxy = 17B5308EE8EA455E9E36344D /* PBXContainerItemProxy */;
+		};
+		37E807FA1F1F5F1A00937EDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A65C3EA6DC684537B77AD967 /* chromaprint_objs */;
+			targetProxy = 37E807F91F1F5F1A00937EDC /* PBXContainerItemProxy */;
+		};
+		6E76263A4FD44EC6AFDAD34D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0384EA14BC6145CEA88FE4C4 /* ZERO_CHECK */;
+			targetProxy = EF18F1FA15414EF09A7711B3 /* PBXContainerItemProxy */;
+		};
+		943F95BA114A448DB12835D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0384EA14BC6145CEA88FE4C4 /* ZERO_CHECK */;
+			targetProxy = 9EA7FEAA0C1042D78BCAC49E /* PBXContainerItemProxy */;
+		};
+		A51161089B974A3AA5B85D30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A65C3EA6DC684537B77AD967 /* chromaprint_objs */;
+			targetProxy = 2A6C8492F49B4C91968396DA /* PBXContainerItemProxy */;
+		};
+		A672F448DEA44B1BA6D6A71E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6101C1624C374DA1852449BC /* ALL_BUILD */;
+			targetProxy = 4DF77DAB1E6048D3ACC6BC07 /* PBXContainerItemProxy */;
+		};
+		BDD185AA722F40759F0BEF25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0384EA14BC6145CEA88FE4C4 /* ZERO_CHECK */;
+			targetProxy = 131E549A70924FCEAD79EFCA /* PBXContainerItemProxy */;
+		};
+		C282B6B28E7641F7ACD19FF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0384EA14BC6145CEA88FE4C4 /* ZERO_CHECK */;
+			targetProxy = 28F783282DD64E608FC04471 /* PBXContainerItemProxy */;
+		};
+		F1544986A5A04F9395807DE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A65C3EA6DC684537B77AD967 /* chromaprint_objs */;
+			targetProxy = 9758488EDED94DA9A038F9A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0520FE6A8FD9456199D1668B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = chromaprint_objs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		117B7D30F3B74EC1B2FB5C81 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGNING_REQUIRED = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = "";
+			};
+			name = RelWithDebInfo;
+		};
+		20E115E1220D4DBCB3A01022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.4.2;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					CHROMAPRINT_API_EXPORTS,
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-install_name",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/Release${EFFECTIVE_PLATFORM_NAME}/libchromaprint.1.dylib",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft_lib_vdsp.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/audio_processor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_resampler.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_filter.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/spectrum.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/image_builder.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/simhash.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/silence_remover.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_calculator.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_compressor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_decompressor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter_configuration.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_matcher.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/base64.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/resample2.o",
+					"-lm",
+					"-framework",
+					Accelerate,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = chromaprint.1.4.2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		24984E826C374EDDB6FA351C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		2635E1E2F4E64C4EAF6DA135 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = chromaprint_objs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		2DEDE501952C4D57B2228F3F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = docs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		35DD2DCFE6F943CDA50F0DEE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		37E807EE1F1F5EEB00937EDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3Z52UR7LAJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RGS.Chroma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		37E807EF1F1F5EEB00937EDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3Z52UR7LAJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RGS.Chroma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		37E807F01F1F5EEB00937EDC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3Z52UR7LAJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RGS.Chroma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = MinSizeRel;
+		};
+		37E807F11F1F5EEB00937EDC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3Z52UR7LAJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RGS.Chroma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = RelWithDebInfo;
+		};
+		3EC7AAEEE3364D81966033D5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.4.2;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					CHROMAPRINT_API_EXPORTS,
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-install_name",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/RelWithDebInfo${EFFECTIVE_PLATFORM_NAME}/libchromaprint.1.dylib",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft_lib_vdsp.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/audio_processor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_resampler.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_filter.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/spectrum.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/image_builder.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/simhash.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/silence_remover.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_calculator.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_compressor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_decompressor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter_configuration.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_matcher.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/base64.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/resample2.o",
+					"-lm",
+					"-framework",
+					Accelerate,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = chromaprint.1.4.2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		5532B887D6034B5B922028E9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.4.2;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					CHROMAPRINT_API_EXPORTS,
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-install_name",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/MinSizeRel${EFFECTIVE_PLATFORM_NAME}/libchromaprint.1.dylib",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft_lib_vdsp.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/audio_processor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_resampler.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_filter.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/spectrum.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/image_builder.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/simhash.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/silence_remover.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_calculator.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_compressor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_decompressor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter_configuration.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_matcher.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/base64.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/resample2.o",
+					"-lm",
+					"-framework",
+					Accelerate,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = chromaprint.1.4.2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		596FD2F6AF7A40C9B73A7F01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = chromaprint_objs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		6325F0B45A394BB4BDB0A1AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGNING_REQUIRED = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = "";
+			};
+			name = Release;
+		};
+		6C4EFA1DF059430CA9923844 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		7D4F553B14D748BFA92746F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.4.2;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					CHROMAPRINT_API_EXPORTS,
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-install_name",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/Debug${EFFECTIVE_PLATFORM_NAME}/libchromaprint.1.dylib",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft_lib_vdsp.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/audio_processor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_resampler.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/chroma_filter.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/spectrum.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fft.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/image_builder.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/simhash.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/silence_remover.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_calculator.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_compressor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_decompressor.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprinter_configuration.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/fingerprint_matcher.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/base64.o",
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS/src/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/chromaprint_objs.build/Objects-normal/$(CURRENT_ARCH)/resample2.o",
+					"-lm",
+					"-framework",
+					Accelerate,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = chromaprint.1.4.2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		7F104B2387504EBD8E0E3DF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = docs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		862A905BB7754A12A7F138CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		9122F427AD8C46D795C91D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		96A285F4790042518377767B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		9FC518F9FE614EC1B98A6CF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		AC973066C510426CAB4BA9CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		B6D9552145BA4AA983027474 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		BA8A65FB9F414578885AC252 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		C326A24148F8480F94E0E782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		C8428A55B213475A8E10252D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGNING_REQUIRED = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SYMROOT = "";
+			};
+			name = Debug;
+		};
+		CD1AE6319A784567B75C5907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++11",
+					"-DNDEBUG",
+					"-fPIC",
+					"-I/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"-I/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = chromaprint_objs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		D33B5FCFF24448FE93C329EB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = docs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		D6AC9174D54945378A4B128E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGNING_REQUIRED = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = "";
+			};
+			name = MinSizeRel;
+		};
+		D96953CBD3CB4EECAFC479E9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		DD769CE6C55E4B9C81D45D18 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		DDA466A86B4543E1AF2E4425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		E3405BA593E54C0C9A5580FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		E410501F19B64377A6D9428C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+					_SCL_SECURE_NO_WARNINGS,
+					_USE_MATH_DEFINES,
+					__STDC_LIMIT_MACROS,
+					__STDC_CONSTANT_MACROS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = docs;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		EE875632C1D24ABEB0ADB8B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/readdle/Desktop/chromaprint-master2/build.iOS",
+					"/Users/readdle/Desktop/chromaprint-master2/src",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/readdle/Desktop/chromaprint-master2/build.iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		018E18794C804F83A6557280 /* Build configuration list for PBXNativeTarget "chromaprint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D4F553B14D748BFA92746F5 /* Debug */,
+				20E115E1220D4DBCB3A01022 /* Release */,
+				5532B887D6034B5B922028E9 /* MinSizeRel */,
+				3EC7AAEEE3364D81966033D5 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		088472C288CA41EBA9755926 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC518F9FE614EC1B98A6CF4 /* Debug */,
+				EE875632C1D24ABEB0ADB8B3 /* Release */,
+				96A285F4790042518377767B /* MinSizeRel */,
+				D96953CBD3CB4EECAFC479E9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0EFAEAE70A984B79A6E02B11 /* Build configuration list for PBXAggregateTarget "docs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F104B2387504EBD8E0E3DF8 /* Debug */,
+				E410501F19B64377A6D9428C /* Release */,
+				D33B5FCFF24448FE93C329EB /* MinSizeRel */,
+				2DEDE501952C4D57B2228F3F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		232AD63C807F4067A9AFF557 /* Build configuration list for PBXProject "chromaprint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8428A55B213475A8E10252D /* Debug */,
+				6325F0B45A394BB4BDB0A1AF /* Release */,
+				D6AC9174D54945378A4B128E /* MinSizeRel */,
+				117B7D30F3B74EC1B2FB5C81 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		25F5A2831C524DA4AEF364F2 /* Build configuration list for PBXNativeTarget "chromaprint_objs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				596FD2F6AF7A40C9B73A7F01 /* Debug */,
+				CD1AE6319A784567B75C5907 /* Release */,
+				0520FE6A8FD9456199D1668B /* MinSizeRel */,
+				2635E1E2F4E64C4EAF6DA135 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		37E807F61F1F5EEB00937EDC /* Build configuration list for PBXNativeTarget "Chroma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37E807EE1F1F5EEB00937EDC /* Debug */,
+				37E807EF1F1F5EEB00937EDC /* Release */,
+				37E807F01F1F5EEB00937EDC /* MinSizeRel */,
+				37E807F11F1F5EEB00937EDC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		435FF44325F74714B9CCB5BC /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				862A905BB7754A12A7F138CD /* Debug */,
+				9122F427AD8C46D795C91D27 /* Release */,
+				B6D9552145BA4AA983027474 /* MinSizeRel */,
+				BA8A65FB9F414578885AC252 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		46A0F50D5E08441592D3EBB2 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C326A24148F8480F94E0E782 /* Debug */,
+				DDA466A86B4543E1AF2E4425 /* Release */,
+				DD769CE6C55E4B9C81D45D18 /* MinSizeRel */,
+				24984E826C374EDDB6FA351C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A23E2C8C2DC24F0092AA8EC0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3405BA593E54C0C9A5580FB /* Debug */,
+				AC973066C510426CAB4BA9CA /* Release */,
+				35DD2DCFE6F943CDA50F0DEE /* MinSizeRel */,
+				6C4EFA1DF059430CA9923844 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C8632B2D11843AFA1DD47DB /* Project object */;
+}
